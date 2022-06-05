@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgis
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: randsson
+  password: 9059857
+  host: localhost
+
+
+development:
+  <<: *default
+  database: best_restaurant_api_development
+
+test:
+  <<: *default
+  database: best_restaurant_api_test
+
+production:
+  <<: *default
+  database: best_restaurant_api_production
+  username: best_restaurant_api
+  password: <%= ENV['BEST_RESTAURANT_API_DATABASE_PASSWORD'] %>
