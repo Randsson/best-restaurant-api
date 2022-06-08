@@ -1,4 +1,4 @@
-class Api::V1::GoogleStoresController < ApplicationController
+class Api::v1::GoogleStoresController < ApplicationController
   def index
     places = GetGoogleRestaurantListService.new(params[:latitude], params[:longitude]).call
     render json: places

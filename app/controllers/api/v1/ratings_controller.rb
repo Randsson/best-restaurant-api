@@ -1,4 +1,4 @@
-class Api::V1::RatingsController < ApplicationController
+class Api::v1::RatingsController < ApplicationController
 
   def create
     ActiveRecord::Base.transaction do
